@@ -1,0 +1,6 @@
+/etc/cron.d/glpi
+/etc/glpi/apache.conf
+/etc/glpi/config/.htaccess
+/etc/glpi/config/based_config.php
+/etc/glpi/config/config.php
+/etc/glpi/config/define.php

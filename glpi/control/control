@@ -1,0 +1,20 @@
+Package: glpi
+Version: 9.4.4
+Architecture: all
+Maintainer: Vitaliy Zhukov <dragonzx@soclan.ru>
+Installed-Size: 41649
+Depends: apache2 | apache | apache-ssl | apache-perl | httpd, php | php-cgi | php-gd, php-curl, php-mbstring, php-soap, php-ldap, php-imap, php-apcu, php-xmlrpc, php-cas, php-cli, php-mysql | php-mysqlnd, debconf (>= 0.5) | debconf-2.0, dbconfig-common, fonts-freefont-ttf, tinymce, libphp-phpmailer, libjs-extjs
+Recommends: mariadb-client, mariadb-server
+Section: web
+Priority: optional
+Description: IT and Asset management software
+ GLPI stands for "Gestionnaire libre de parc informatique",
+ GLPI is the Information Resource-Manager with an additional Administration
+ Interface.
+ .
+ You can use it to build up a database with an inventory for your company
+ (computer, software, printers, ...). It has enhanced functions to make the
+ daily life for the administrators easier, like a job tracking system with
+ mail-notification and methods to build a database with basic information
+ about your network-topology.
+Original-Maintainer: Pierre Chifflier <pollux@debian.org> Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>

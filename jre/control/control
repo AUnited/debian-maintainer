@@ -1,0 +1,10 @@
+Package: jre
+Version: 1.8.0-191
+Section: misc
+Architecture: amd64
+Depends: bash
+Priority: optional
+Maintainer: AUnited <repo@aunited.ru>
+Installed-Size: 158840
+Description: Java 8 Development Kit for Debian/Ubuntu
+Origin: http://java.com/
