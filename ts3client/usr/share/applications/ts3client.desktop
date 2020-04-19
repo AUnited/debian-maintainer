@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=TeamSpeak
 Comment=VoIP chat for online gaming
-Exec=teamspeak
+Exec=ts3client
 Icon=teamspeak.png
 Terminal=false
 Type=Application

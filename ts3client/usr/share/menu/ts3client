@@ -1,0 +1,4 @@
+?package(ts3client): needs="X11" \
+  section="Applications/Network/Communication" title="TeamSpeak 3" \
+  longtitle="VoIP chat for online gaming" command="/usr/sbin/ts3client" \
+  icon="/usr/share/pixmaps/teamspeak.png"
