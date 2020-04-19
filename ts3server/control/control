@@ -1,5 +1,5 @@
 Package: ts3server
-Version: 3.0.7.2
+Version: 3.12.1
 Section: net
 Architecture: amd64
 Depends: bash (>=4.0)

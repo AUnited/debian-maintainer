@@ -12,10 +12,10 @@
 # All rights reserved
 
 COMMANDLINE_PARAMETERS="${2}" #add any command line parameters you want to pass here
-BINARYPATH=/usr/bin/mh/ts3server
+BINARYPATH=/opt/ts3server
 cd "${BINARYPATH}"
 LIBRARYPATH="$(pwd)"
-BINARYNAME="ts3server_linux_amd64"
+BINARYNAME="ts3server"
 PIDFILE="${BINARYPATH}"/ts3server.pid
 
 case "$1" in
