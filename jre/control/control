@@ -1,10 +1,10 @@
 Package: jre
-Version: 1.8.0-191
+Version: 1.8.0-251
 Section: misc
 Architecture: amd64
 Depends: bash
 Priority: optional
-Maintainer: AUnited <repo@aunited.ru>
+Maintainer: Soclan <repo@soclan.ru>
 Installed-Size: 158840
-Description: Java 8 Development Kit for Debian/Ubuntu
+Description: Java 8 Runtime for Debian/Ubuntu
 Origin: http://java.com/
