@@ -1,0 +1,13 @@
+Package: cossacks3-server
+Source: cossacks3-server (2.1.4)
+Version: 2.1.4
+Architecture: amd64
+Maintainer: Vitaliy Zhukov <dragonzx@aunited.ru>
+Installed-Size: 7887
+Depends: libc6 (>= 2.28)
+Section: contrib/net
+Priority: optional
+Homepage: https://github.com/ereb-thanatos/cossacks3-lan-server
+Description: gaming server that emulates Cossacks3 server
+ The server currently implements most of the same functionality as the
+ real Cossacks3 server
