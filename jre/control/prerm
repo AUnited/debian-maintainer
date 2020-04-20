@@ -2,6 +2,6 @@
 set -e # fail on any error
 set -u # treat unset variables as errors
 
-update-alternatives --remove java /usr/lib/jre-1.8.0_251/bin/java
+update-alternatives --remove java /usr/lib/jre1.8.0_251/bin/java
 
 exit 0
