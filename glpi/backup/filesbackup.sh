@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/usr/bin/env bash
 # It runs once per month, no rsync and cleanup (main script do it daily)
 # Tar-ed to *.xz, so it is not displayed at GLPI backup/restore feature
 BASE="/usr/share/glpi" # GLPI script location

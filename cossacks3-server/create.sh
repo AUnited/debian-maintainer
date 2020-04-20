@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 git clone https://github.com/StarsAlliance/cossacks3-lan-server.git
 cd cossacks3-lan-server || exit
 git submodule update --init --recursive

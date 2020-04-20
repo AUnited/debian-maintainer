@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/usr/bin/env bash
 ### BEGIN INIT INFO
 # Provides: ts3server
 # Required-Start: $remote_fs $syslog
@@ -8,12 +8,12 @@
 # Short-Description: Start daemon at boot time
 # Description: Enable service provided by daemon.
 ### END INIT INFO
-# Copyright (c) 2010 TeamSpeak Systems GmbH
+# Copyright (c) 2020 TeamSpeak Systems GmbH
 # All rights reserved
 
 COMMANDLINE_PARAMETERS="${2}" #add any command line parameters you want to pass here
 BINARYPATH=/opt/ts3server
-cd "${BINARYPATH}"
+cd "${BINARYPATH}" || exit
 LIBRARYPATH="$(pwd)"
 BINARYNAME="ts3server"
 PIDFILE="${BINARYPATH}"/ts3server.pid
@@ -21,7 +21,7 @@ PIDFILE="${BINARYPATH}"/ts3server.pid
 case "$1" in
 	start)
 		if [ -e "${PIDFILE}" ]; then
-			if ( kill -0 $(cat "${PIDFILE}") 2> /dev/null ); then
+			if ( kill -0 "$(cat "${PIDFILE}")" 2> /dev/null ); then
 				echo "The server is already running, try restart or stop"
 				exit 1
 			else
@@ -48,11 +48,11 @@ case "$1" in
 			fi
 			if [ -x "$BINARYNAME" ]; then
 				export LD_LIBRARY_PATH="${LIBRARYPATH}:${LD_LIBRARY_PATH}"					
-				"./${BINARYNAME}" ${COMMANDLINE_PARAMETERS} > /dev/null & 
+				"./${BINARYNAME}" "${COMMANDLINE_PARAMETERS}" > /dev/null &
 				echo $! > "${PIDFILE}"
 				echo "TeamSpeak 3 server started, for details please view the log file"
 			else
-				echo "${BINARNAME} is not exectuable, cannot start TeamSpeak 3 server"
+				echo "${BINARYNAME} is not exectuable, cannot start TeamSpeak 3 server"
 			fi
 		else
 			echo "Could not find binary, aborting"
@@ -62,10 +62,10 @@ case "$1" in
 	stop)
 		if [ -e "${PIDFILE}" ]; then
 			echo -n "Stopping the TeamSpeak 3 server"
-			if ( kill -TERM $(cat "${PIDFILE}") 2> /dev/null ); then
+			if ( kill -TERM "$(cat "${PIDFILE}")" 2> /dev/null ); then
 				c=1
 				while [ "$c" -le 300 ]; do
-					if ( kill -0 $(cat "${PIDFILE}") 2> /dev/null ); then
+					if ( kill -0 "$(cat "${PIDFILE}")" 2> /dev/null ); then
 						echo -n "."
 						sleep 1
 					else
@@ -74,9 +74,9 @@ case "$1" in
 					c=$((++c)) 
 				done
 			fi
-			if ( kill -0 $(cat "${PIDFILE}") 2> /dev/null ); then
+			if ( kill -0 "$(cat "${PIDFILE}")" 2> /dev/null ); then
 				echo "Server is not shutting down cleanly - killing"
-				kill -KILL $(cat "${PIDFILE}")
+				kill -KILL "$(cat "${PIDFILE}")"
 			else
 				echo "done"
 			fi
@@ -94,7 +94,7 @@ case "$1" in
 	;;
 	status)
 		if [ -e "${PIDFILE}" ]; then
-			if ( kill -0 $(cat "${PIDFILE}") 2> /dev/null ); then
+			if ( kill -0 "$(cat "${PIDFILE}")" 2> /dev/null ); then
 				echo "Server is running"
 			else
 				echo "Server seems to have died"
@@ -108,4 +108,3 @@ case "$1" in
 		exit 2
 esac
 exit 0
-

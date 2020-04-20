@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/usr/bin/env bash
 user=""       # Database user
 db=""          # Database name
 mdp=""        # Database password
