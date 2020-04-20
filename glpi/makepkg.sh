@@ -4,7 +4,7 @@ Do you want to install package-making tools?
 apt install dpkg debconf debhelper lintian
 # Tuning up version and destination
 pkgname="glpi"
-version="9.4.4"
+version="9.4.5"
 arch="all"
 spath=$(pwd)
 # Here we are downloading and untaring archive
